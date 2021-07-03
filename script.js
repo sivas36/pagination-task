@@ -33,9 +33,9 @@ req.onload=function()
 
 }
 var table=document.createElement('table');
-let tables=()=>{
-    
 
+var thead= document.createElement('thead');
+let tables=()=>{
     
 table.className ="table";
 
@@ -46,7 +46,6 @@ table.style.marginLeft="7%";
 table.style.width="90%";
 
 
-var thead= document.createElement('thead');
 thead.className="thead-dark";
 
 
@@ -98,21 +97,23 @@ let cd = (n) => {
     num=n;
 }
 
+
 let currenpage=num;
 
 let cdn= () => {
-    if(currenpage<=9){
-    tableers(currenpage);
-    currenpage++;
+    
+    if(num<=9){
+    tableers(num);
+    
     num++;
     }
 }
 
  
 let cdp=()=>{
-    if(currenpage>0){
-      tableers(currenpage-1);
-      currenpage--;
+    if(num>0){
+      num--;
+      tableers(num);
     }
 }
 
@@ -125,7 +126,7 @@ let cdp=()=>{
 
  
 let tableers =(num) =>{
-       
+    
 table.innerHTML=document.createElement('table');
     
 table.className ="table";
@@ -137,7 +138,7 @@ table.style.marginLeft="7%";
 table.style.width="90%";
 
 
-var thead= document.createElement('thead');
+thead= document.createElement('thead');
 thead.className="thead-dark";
 
 
@@ -199,83 +200,3 @@ function createth(elementname,value=" "){
 
     
 
-    
-    
-
-
-    
-  
-    
-
-
-
-
-
-
-
-
-
-/*
-var res= document.getElementsByClassName("main");//return html collection
-console.log(res);
-
-var res2 = document.getElementsByTagName("div");
-console.log(res2);
-
-var rev = document.createElement('div');
-rev.innerHTML="<p> this is an p </p>";
-document.body.append(rev);
-
-var container=document.createElement("div");
-container.setAttribute('class','container');
-
-
-var row=document.createElement("div");
-row.className="row";
-
-
-var col=document.createElement("div");
-col.className="col";
-
-row.append(col);
-container.append(row);
-document.body.append(container);
-
-*/
-/*
-var revs = document.createElement('div');
-revs.innerText="<p> this is an p </p>";
-document.body.append(revs);
-
-
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*var div = document.createElement('div');
-div.innerHTML="siva kumar";
-div.style.color="blue";
-document.body.append(div);*/
-/*
-var res = document.getElementById("main").innerHTML="this is dynamic div";
-console.log(res);
-/*LAST SESSION
-
-*/
